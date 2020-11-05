@@ -40,7 +40,7 @@ const autoScroll = (page) =>
     try {
       const browser = await puppeteer.launch({
         args: [`--proxy-server=${proxy}`, "--incognito"],
-        headless: false,
+        headless: true,
       });
       const context = await browser.createIncognitoBrowserContext();
       const page = await context.newPage();
